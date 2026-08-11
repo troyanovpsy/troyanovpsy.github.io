@@ -6,29 +6,75 @@
 <title>Политика конфиденциальности — Никита Троянов</title>
 <style>
   :root {
-    --bg: #E4E1D7; --fg: #1E2422; --fg-muted: #5B5F55; --line: rgba(30,36,34,0.14);
-    --teal: #2B5A56;
-    --font-display: Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', 'PT Serif', serif;
-    --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --bg: #DCE7EE; --fg: #1B2A36; --fg-muted: #4E5F6D; --line: rgba(27,42,54,0.14);
+    --teal: #2F5170; --teal-deep: #26425C; --brass: #9A4527;
+    --font-display: Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Book Antiqua', 'PT Serif', 'Times New Roman', serif;
+    --font-body: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Inter', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --font-mono: 'Courier New', 'Cascadia Mono', ui-monospace, monospace;
+    --mosaic-frame: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23CCDCE7'/%3E%3Crect width='7' height='7' fill='%233F6486'/%3E%3Crect x='9' width='7' height='7' fill='%23A5461F'/%3E%3Crect y='9' width='7' height='7' fill='%23CCDCE7'/%3E%3Crect x='9' y='9' width='7' height='7' fill='%232F5170'/%3E%3C/svg%3E");
   }
   @media (prefers-color-scheme: dark) {
-    :root { --bg:#10181A; --fg:#EDEAE2; --fg-muted:#AEB6AF; --line: rgba(237,234,226,0.14); --teal:#6FA79F; }
+    :root {
+      --bg:#101E28; --fg:#E7EFF4; --fg-muted:#9DB2C0; --line: rgba(231,239,244,0.14);
+      --teal:#8DB6CE; --teal-deep:#8DB6CE; --brass:#E2A97F;
+      --mosaic-frame: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23152633'/%3E%3Crect width='7' height='7' fill='%233F6E90'/%3E%3Crect x='9' width='7' height='7' fill='%23C0663A'/%3E%3Crect y='9' width='7' height='7' fill='%23152633'/%3E%3Crect x='9' y='9' width='7' height='7' fill='%238DB6CE'/%3E%3C/svg%3E");
+    }
   }
-  :root[data-theme="dark"] { --bg:#10181A; --fg:#EDEAE2; --fg-muted:#AEB6AF; --line: rgba(237,234,226,0.14); --teal:#6FA79F; }
-  :root[data-theme="light"] { --bg:#E4E1D7; --fg:#1E2422; --fg-muted:#5B5F55; --line: rgba(30,36,34,0.14); --teal:#2B5A56; }
+  :root[data-theme="dark"] {
+    --bg:#101E28; --fg:#E7EFF4; --fg-muted:#9DB2C0; --line: rgba(231,239,244,0.14);
+    --teal:#8DB6CE; --teal-deep:#8DB6CE; --brass:#E2A97F;
+    --mosaic-frame: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23152633'/%3E%3Crect width='7' height='7' fill='%233F6E90'/%3E%3Crect x='9' width='7' height='7' fill='%23C0663A'/%3E%3Crect y='9' width='7' height='7' fill='%23152633'/%3E%3Crect x='9' y='9' width='7' height='7' fill='%238DB6CE'/%3E%3C/svg%3E");
+  }
+  :root[data-theme="light"] {
+    --bg:#DCE7EE; --fg:#1B2A36; --fg-muted:#4E5F6D; --line: rgba(27,42,54,0.14);
+    --teal:#2F5170; --teal-deep:#26425C; --brass:#9A4527;
+    --mosaic-frame: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Crect width='16' height='16' fill='%23CCDCE7'/%3E%3Crect width='7' height='7' fill='%233F6486'/%3E%3Crect x='9' width='7' height='7' fill='%23A5461F'/%3E%3Crect y='9' width='7' height='7' fill='%23CCDCE7'/%3E%3Crect x='9' y='9' width='7' height='7' fill='%232F5170'/%3E%3C/svg%3E");
+  }
   * { box-sizing: border-box; }
   body {
     margin: 0; background: var(--bg); color: var(--fg); font-family: var(--font-body);
     font-size: 17px; line-height: 1.7;
   }
-  .wrap { max-width: 640px; margin: 0 auto; padding: 3.5rem 1.5rem 5rem; }
-  a { color: var(--teal); }
-  h1 { font-family: var(--font-display); font-weight: 400; font-size: 1.9rem; margin: 0 0 0.4rem; }
-  .back { display: inline-block; margin-bottom: 2rem; font-size: 0.9rem; color: var(--fg-muted); text-decoration: none; }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 3.5rem 2rem 5rem; }
+  a { color: var(--brass); text-underline-offset: 3px; }
+  .back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 2.25rem;
+    font-family: var(--font-mono);
+    font-size: 0.74rem;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--fg-muted);
+    text-decoration: none;
+  }
+  .back::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-image: var(--mosaic-frame);
+    background-size: 10px 10px;
+  }
   .back:hover { color: var(--fg); }
-  h2 { font-family: var(--font-display); font-weight: 400; font-size: 1.25rem; margin: 2.2rem 0 0.6rem; }
+  h1 { font-family: var(--font-display); font-weight: 400; font-size: clamp(1.6rem, 3vw, 2.1rem); margin: 0 0 0.5rem; }
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    font-size: 1.28rem;
+    margin: 2.4rem 0 0.7rem;
+    padding-top: 1.4rem;
+    border-top: 1px solid var(--line);
+  }
   p { margin: 0 0 1rem; color: var(--fg-muted); }
-  .updated { font-size: 0.85rem; color: var(--fg-muted); margin-bottom: 2rem; }
+  .updated {
+    font-family: var(--font-mono);
+    font-size: 0.74rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--teal-deep);
+    margin-bottom: 2.25rem;
+  }
 </style>
 </head>
 <body>
